@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sekai State</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="loading-overlay">
+  <div class="loading-animation">
+  </div>
+  <div class="loading-text">Loading ...</div>
+</div>
+
+  <header>
+    <h1>Sekai State</h1>
+  </header>
+  <main>
+    <div class="state-cards">
+      <div class="state-card">
+        <h4>Total Chat:</h4>
+        <div id="total-chat">00</div>
+      </div>
+      <div class="state-card">
+        <h4>Average Daily:</h4>
+        <div id="average-chat">00</div>
+      </div>
+    </div>
+    
+    <canvas id="chatState"></canvas>
+    
+    <div id="table-menu">
+     <div item="chat-rank">Chat Rank</div>
+     <div item="ruby-rank">Ruby Rank</div>
+     <div item="top-post-rank">Post Rank</div>
+    </div>
+    <div class="rank-card" id="chat-rank">
+      <h4>Chat Rank:</h4>
+      <table>
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>ID</th>
+          <th>ACT</th>
+          <th>MSG</th>
+          <th>AD</th>
+          <th>DSJ</th>
+        </tr>
+      </thead>
+      <tbody id="member-chat-rank">
+      </tbody>
+      </table>
+      <div class="table-info">رنک کاربران بر اساس میزان فعالیت</div>
+    <ul dir="rtl" >
+      <li><strong>ACT :</strong>
+      درصد فعالیت در گپ بر اساس طول پیام ها
+      </li>
+      <li><strong>MSG :</strong>
+      تعداد کل پیام ها در ماه
+      </li>
+      <li><strong>AD :</strong>
+      تعداد روز های فعال در ماه
+      </li>
+      <li><strong>DSJ :</strong>
+      تعداد روز های فعال در طول ماه
+      </li>
+    </ul>
+    </div>
+    
+    
+    <div class="rank-card" id="ruby-rank" style="display: none;">
+      <h4>Ruby Rank:</h4>
+      <table>
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>ID</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="member-ruby-rank">
+      </tbody>
+    </table>
+     <div class="table-info">رنک کاربران بر اساس دارایی ها</div>
+     <ul dir="rtl">
+       <li><strong>ID :</strong>
+          شماره حساب کاربر
+       </li>
+       <li><strong>Status :</strong>
+         وضعیت حساب کاربر(VIP/Normal)
+       </li>
+     </ul>
+    </div>
+    
+    <div class="rank-card" id="top-post-rank" style="display: none;">
+      <h4>Top Post Rank:</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>ID</th>
+            <th>Top Post</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="member-post-rank">
+        </tbody>
+      </table>
+     <div class="table-info">رنک کاربران بر اساس تعداد برتری ریپوست</div>
+     <ul dir="rtl">
+       <li><strong>ID :</strong>
+          شماره حساب کاربر
+       </li>
+       <li><strong>Top post :</strong>
+         تعداد پست برتر کاربر
+       </li>
+       <li><strong>Status :</strong>
+         وضعیت حساب کاربر(VIP/Normal)
+       </li>
+     </ul>
+    </div>
+    
+ <div id="repost-theme">
+   <h2>Repost Weekly Themes</h2>
+   <table class="container">
+	<thead>
+		<tr>
+			<th><h1>DAY</h1></th>
+			<th><h1>DATE</h1></th>
+			<th><h1>THEME</h1></th>
+		</tr>
+	</thead>
+	<tbody id="repost-themes">
+	</tbody>
+	</table>
+	</div>
+	
+	<div class="golden">
+	  <div class="shine">
+	    <h2>Best User</h2>
+	    <span id="bUserName">Null</span>
+	    <span id="bUserId">Null</span>
+	  </div>
+	  <div class="shine">
+	    <h2>Best Admin</h2>
+	    <span id="bVipName">Null</span>
+	    <span id="bVipId">Null </span>
+	  </div>
+	</div>
+	
+	<div id="VIP-box" class="shine">
+	  <h2>VIP USER</h2> 
+	</div>
+	
+  </main>
+  <header>
+    <h2>Sekai Role Play</h2>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="main.js"></script>
+</body>
+</html>
